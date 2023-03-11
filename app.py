@@ -4,7 +4,7 @@ import datetime
 
 PATH = 'db/jobs.sqlite'
 
-app = Flask(__name__, template_folder="templates")
+app = Flask(__name__, template_folder="templates", static_url_path='/static')
 
 def open_connection():
     connection = getattr(g, '_connection', None)

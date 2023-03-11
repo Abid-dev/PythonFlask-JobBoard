@@ -1,14 +1,12 @@
-<!-- templates/layout.html -->
 {% from '_macros.html' import show_job, show_jobs with context %}
 <!doctype html>
 <html>
   <head>
     <title>Job Board</title>
-    <link rel="stylesheet" href="{{url_for("static", filename="css/bulma.min.css")}}">
-    <link rel="stylesheet" href="{{url_for("static", filename="css/app.css")}}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bundle.css') }}">
   </head>
-  <body>
+  <body style="background: skyblue">
     <div class="container top">
       <div class="content">
         {% block content %}
@@ -16,4 +14,5 @@
       </div>
     </div>
   </body>
+  <script src="{{ url_for('static', filename='bundle.js') }}"></script>
 </html>
