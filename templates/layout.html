@@ -1,13 +1,15 @@
 {% from '_macros.html' import show_job, show_jobs with context %}
 <!doctype html>
-<html>
+<html has-navbar-fixed-top>
   <head>
     <title>Job Board</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='bundle.css') }}">
   </head>
-  <body style="background: skyblue">
-    <div class="container top">
+  <body>
+    {% include 'navbar.html' %}
+
+    <div class="container pt-6 mt-6">
       <div class="content">
         {% block content %}
         {% endblock %}
