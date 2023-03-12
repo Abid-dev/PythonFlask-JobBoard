@@ -24,3 +24,24 @@
         {% endfor %}
     </div>
 {% endmacro %}
+
+{% macro show_employers(employers) %}
+    <table class="table is-hoverable is-striped">
+      <thead>
+        <tr>
+          <th>Reference</th>
+          <th>Name</th>
+          <th>City</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+    {% for employer in employers%}
+      <tr>
+        <td class="">{{employer['id']}}</td>
+        <td class="has-text-link"><a href="{{ url_for('employer', employer_id=employer['id'])}}">{{employer['name']}}</a></td>
+        <td class="">{{employer['city']}}</td>
+        <td class="">{{employer['description']}}</td>
+      </tr>
+    {% endfor%}
+    </table>
+{% endmacro %}
