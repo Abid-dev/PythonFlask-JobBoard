@@ -1,5 +1,10 @@
 html {
-  background: rgb(245, 245, 247);
+  background: rgb(1, 1, 36);
+  color: white;
+}
+
+.container {
+  width: 80%;
 }
 
 .adjust-height {
@@ -8,4 +13,8 @@ html {
   
 .top {
 margin-top: 20px; 
+}
+
+.review-form label {
+  color: white;
 }
